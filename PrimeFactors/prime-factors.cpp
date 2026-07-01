@@ -4,15 +4,11 @@ using std::vector;
 
 class PrimeFactors {
 public:
-    vector<int> of(int i) {
+    vector<int> of(int num) {
         vector<int> result = {};
-        if (i == 2) {
-			result.push_back(2);
+        if (num > 1) {
+			result.push_back(num);
         }
-        if (i == 3) {
-            result.push_back(3);
-        }
-
         return result;
     }
 };
