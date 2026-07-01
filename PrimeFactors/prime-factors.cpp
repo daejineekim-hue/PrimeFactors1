@@ -4,19 +4,16 @@ using std::vector;
 
 class PrimeFactors {
 public:
-    vector<int> of(int num) {
+    std::vector<int> of(int number) {
         vector<int> result = {};
-        if (num > 1) {
-            if (num == 4)
-            {
-				result.push_back(2);
-				result.push_back(2);
-			}
-            else
-            {
-                result.push_back(num);
+
+        for (int divisor = 2; number > 1; divisor++) {
+            while (number % divisor == 0) {
+                result.push_back(divisor);
+                number /= divisor;
             }
         }
+
         return result;
     }
 };
